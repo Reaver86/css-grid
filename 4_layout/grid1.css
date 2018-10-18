@@ -1,0 +1,24 @@
+.container2 {
+	display: grid;
+	grid-gap: 10px;
+}
+
+.item2 {
+	display: flex !important;
+	order: -1;
+}
+
+.item2 > * {
+	flex-grow: 1;
+}
+
+.item, .item2 > * {
+	display: grid;
+	place-items: center;
+	background-color: #BADA55;
+	border: 5px solid rgba(0,0,0,0.03);
+	border-radius: 3px;
+	font-size: 25px;
+	padding: 0.5em;
+	font-weight: 700;
+}

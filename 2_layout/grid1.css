@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+    grid-template-columns: [start] 1fr 1fr [end-content start-side] 300px [end];
+    grid-template-rows: auto [start-side] auto auto [end-side] auto;
+    grid-gap: 10px;
+}
+
+.item1 {
+    grid-column: start / end;
+}
+
+.item2 {
+    grid-column: start / end-content;
+}
+
+.item3 {
+    grid-column: start-side / end;
+    grid-row: start-side/ end-side;
+}
+
+.item6 {
+    grid-column: start / end;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: [start start-side] 1fr 1fr [end-content end];
+        grid-template-rows: auto [start-side] auto [end-side] auto auto auto;
+    }
+}

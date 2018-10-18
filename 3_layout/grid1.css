@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  grid-template:
+      "header   header   header"
+      "content  content  side" 400px
+      "article1 article2 side" 150px
+      "footer   footer   footer" /
+    1fr       1fr      300px;
+  grid-gap: 10px;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: content;
+}
+
+.item3 {
+  grid-area: side;
+}
+
+.item4 {
+  grid-area: article1;
+}
+
+.item5 {
+  grid-area: article2;
+}
+
+.item6 {
+  grid-area: footer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template:
+        "header   header"
+        "side     side"
+        "content  content" 300px
+        "article1 article2"
+        "footer   footer" /
+      1fr       1fr;
+  }
+}
